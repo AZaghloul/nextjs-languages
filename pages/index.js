@@ -29,6 +29,7 @@ export default function Home() {
       <Link href="/products/1">
         <a>Prouduct 1</a>
       </Link>
+      <br />
       <Link href="/" locale={router.locale === "en" ? "fr" : "en"}>
         <a>Change language</a>
       </Link>
