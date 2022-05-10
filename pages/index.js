@@ -5,6 +5,8 @@ import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
+import i18nConfig from "../next-i18next.config";
+
 export default function Home() {
   const { t } = useTranslation("common");
   const router = useRouter();
@@ -40,7 +42,7 @@ export default function Home() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale, ["common"], i18nConfig)),
     },
   };
 }
