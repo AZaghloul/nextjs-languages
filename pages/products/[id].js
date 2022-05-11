@@ -48,6 +48,11 @@ export const getStaticPaths = () => ({
   paths: [
     {
       params: { id: "1" },
+      locale: "en",
+    },
+    {
+      params: { id: "1" },
+      locale: "fr",
     },
   ],
 });
